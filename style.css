@@ -66,6 +66,7 @@ burger{
 	body{
 		overflow-x: hidden;
 	}
+
 	.nav-links{
 		position: absolute;
 		right: 0px;
@@ -78,6 +79,7 @@ burger{
 		width: 50%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
+		
 	}
 
 	.nav-links li{
@@ -95,14 +97,98 @@ burger{
 }
 
 
-@keyframes navLinkFade {
+@keyframes navLinkFade{
 	from {
 		opacity: 0;
 		transform: translateX(50px);
 	}
-	to{
+	to {
 		opacity: 1;
 		transform: translateX(0px);
 	}
 
+}
+
+.toggle .line1{
+	transform: rotate(-45deg translate(-5px,6px));
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+
+.toggle .line3{
+	transform: rotate(-45deg, translate(-5px,-6px));
+}
+
+
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	
+}
+
+.card-container{
+	
+	width: 200px;
+	height: 300px;
+
+
+}
+
+.card{
+	width: 100%;
+	height: 100%;
+	transition: transform 1s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.card-container:hover .card{
+
+	transform: rotateY(180deg);
+}
+
+
+.card figure{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin: 0;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.card .back{
+	color: white;
+	background: grey;
+	transform: rotateY(180deg);
+
+
+}
+
+.card .front{
+	background: #754f5b;
+	color: white;
+	text-align: center;
+
+
+}
+
+.back button{
+	background: #754f5b ;
+	width: 50%;
+	height: 3vh;
+	border-style: none;
+	border-radius: 5px;
+	color: rgb(266, 266, 266);
+	padding: 10px 20px;
 }
